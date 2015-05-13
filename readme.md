@@ -1,5 +1,7 @@
 #DOM Manipulation Exercise
 
+As always, fork and clone this repo.  Submit the link to your fork when you're done.
+
 ###Checkerboard
 
 On the master branch, write code to generate a checkboard pattern as seen below:
