@@ -1,6 +1,7 @@
 // Your JS goes here
 window.onload = function(){
 	makeDivs();
+	getRandomColor();
 };
 
 function makeDivs(){
@@ -11,14 +12,17 @@ function makeDivs(){
 		div.style.float="left";
 		div.style.paddingBottom="11.1%";
 		div.style.height="11.1%";
-		if (i%2===0){
-			div.style.backgroundColor="red";
-		} 
-		else {
-			div.style.backgroundColor="black";
-		}
+		div.style.backgroundColor=getRandomColor();
 		parent.appendChild(div);
 	}
 }
 
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
