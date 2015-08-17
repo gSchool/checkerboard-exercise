@@ -9,7 +9,8 @@ window.onload = function() {
 
 
 // creatingDIV();
-creatingColurfulDIVs();
+// creatingColurfulDIVs();
+creatingGradient();
 };
 
 var creatingDIV = function() {
@@ -59,4 +60,48 @@ var creatingColurfulDIVs = function() {
                 document.body.appendChild(div);
            
         }
-    };
+};
+
+var creatingGradient = function() {
+
+
+
+    var parent = document.createElement("div");
+
+    // div.style.position = "relative";
+    parent.style.width = "100%";
+    parent.style.paddingBottom = "100%";
+    // div.style.backgroundColor = "red";
+    parent.style.background = "linear-gradient(to bottom, blue, white)";
+    // parent.style.opacity = "0.7";
+    var body = document.getElementsByTagName("body");
+
+
+    document.body.appendChild(parent);
+
+    for(i = 1; i < 64; i++) {
+        
+        var checkBox = document.createElement("div");
+        // give div size properties
+        checkBox.style.width = "11.1%";
+        checkBox.style.float = "left";
+        checkBox.style.paddingBottom = "11.1%";
+
+        if(i % 2 === 0){
+            // change backgroundColor to red for even numbered tiles
+            checkBox.style.backgroundColor = "DeepPink";
+            checkBox.style.opacity = "0.3";
+            checkBox.id = i;
+            parent.appendChild(checkBox);
+        }
+        else {
+            // change backgroundColor to black for odd numbered tiles
+            checkBox.style.backgroundColor = "blue";
+            checkBox.style.opacity = "0.3";
+            checkBox.id = i;
+            parent.appendChild(checkBox);
+        }
+    }
+
+};
+
