@@ -8,9 +8,11 @@ window.onload = function() {
 // 4. access all divs and change color: odds are black, evens are red
 
 
-// creatingDIV();
+creatingDIV();
 // creatingColurfulDIVs();
-creatingGradient();
+// creatingGradient();
+
+flash();
 };
 
 var creatingDIV = function() {
@@ -104,4 +106,22 @@ var creatingGradient = function() {
     }
 
 };
+
+var changingColor = function() {
+
+            var colors = ["DarkGreen", "DeepPink", "DodgerBlue", "red", "aqua", "blue", "green", "pink", "black", "yellow", "grey"];
+            
+            for(i = 1; i < 64; i++) {
+                var div = document.getElementById(i);
+                
+                var randomNumber = Math.floor(Math.random()*colors.length);
+                // change backgroundColor to random color
+                div.style.backgroundColor = colors[randomNumber];
+        }
+    };
+
+var flash = function() {
+    setInterval(changingColor, 500);
+};
+
 
