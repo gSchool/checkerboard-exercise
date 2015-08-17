@@ -8,7 +8,8 @@ window.onload = function() {
 // 4. access all divs and change color: odds are black, evens are red
 
 
-creatingDIV();
+// creatingDIV();
+creatingColurfulDIVs();
 };
 
 var creatingDIV = function() {
@@ -37,3 +38,25 @@ var creatingDIV = function() {
     }
 };
 
+var creatingColurfulDIVs = function() {
+
+            var colors = ["DarkGreen", "DeepPink", "DodgerBlue", "red", "aqua", "blue", "green", "pink", "black", "yellow", "grey"];
+            
+            for(i = 1; i < 64; i++) {
+            
+
+                var div = document.createElement("div");
+                // give div size properties
+                div.style.width = "11.1%";
+                div.style.float = "left";
+                div.style.paddingBottom = "11.1%";
+                var body = document.getElementsByTagName("body");
+                
+                var randomNumber = Math.floor(Math.random()*colors.length);
+                // change backgroundColor to red for even numbered tiles
+                div.style.backgroundColor = colors[randomNumber];
+                div.id = i;
+                document.body.appendChild(div);
+           
+        }
+    };
