@@ -13,12 +13,14 @@
 // divBlack.style.display = "inline-block";
 // divBlack.style.float = "left";
 
-prop = function(N,color){
+prop = function(color,body){
+  var N = document.createElement("div");
   N.style.width = "11.1%";
   N.style.height = "100px";
   N.style.display = "inline-block";
   N.style.float = "left";
   N.style.backgroundColor = color;
+  body.appendChild(N);
 }
 
 
@@ -34,13 +36,12 @@ var count = 1;
 
 for(var i=0; i < row*col; i++){
     if(i%2 ==0){
-      var divRed = document.createElement("div");
-      prop(divRed,"red");
-      body.appendChild(divRed);
+      prop("red",body);
+      // body.appendChild(divRed);
 }
     else{
-      var divBlack = document.createElement("div");
-      prop(divBlack,"black");
-      body.appendChild(divBlack);
+      // var divBlack = document.createElement("div");
+      prop("black"body);
+      // body.appendChild(divBlack);
      }
 }
