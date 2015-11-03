@@ -10,7 +10,8 @@ for (var i = 0; i < 9 * 7; i ++)
   var div = document.createElement('div');
   div.style.width = div.style.paddingBottom = '11.1%';
   div.style.float = 'left';
-  div.style.backgroundColor =
-    'rgb(' + [ran(), ran(), ran()].join(', ') + ')';
+  div.style.backgroundColor = (i % 2 === 0) ? 'pink' : 'red';
+  div.style.opacity = '0.5';
   body.appendChild(div);
 }
+body.style.backgroundImage = 'linear-gradient(to top, #55c6ee, #f90067)';
