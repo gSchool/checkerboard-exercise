@@ -10,7 +10,7 @@ for (var i = 0; i < 9 * 7; i ++)
   var div = document.createElement('div');
   div.style.width = div.style.paddingBottom = '11.1%';
   div.style.float = 'left';
-  div.style.backgroundColor = (i % 2 === 0) ? 'pink' : 'red';
+  div.style.backgroundColor = (i % 2 === 0) ? 'blue' : 'red';
   div.style.opacity = '0.5';
   body.appendChild(div);
 }
