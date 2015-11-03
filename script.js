@@ -13,17 +13,17 @@
 // divBlack.style.display = "inline-block";
 // divBlack.style.float = "left";
 
-prop = function(color,body){
+prop = function(r,g,b,body){
   var N = document.createElement("div");
   N.style.width = "11.1%";
   N.style.height = "100px";
   N.style.display = "inline-block";
   N.style.float = "left";
-  N.style.backgroundColor = color;
+  N.style.backgroundColor = "rgb("+r+","+g+","+b+")";
   body.appendChild(N);
 }
 
-
+g
 
 var body = document.getElementsByTagName('body')[0];
 body.style.margin = "0px";
@@ -33,15 +33,15 @@ body.style.margin = "0px";
 var col = 9;
 var row = 7;
 var count = 1;
-
+//Random Colors
 for(var i=0; i < row*col; i++){
-    if(i%2 ==0){
-      prop("red",body);
+      var r = Math.floor(Math.random()*256);
+      console.log(r);
+      var g = Math.floor(Math.random()*256);
+      console.log(g);
+      var b = Math.floor(Math.random()*256);
+      console.log(b);
+      prop(r,g,b,body);
       // body.appendChild(divRed);
-}
-    else{
-      // var divBlack = document.createElement("div");
-      prop("black"body);
-      // body.appendChild(divBlack);
-     }
+
 }
