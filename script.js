@@ -1,5 +1,8 @@
 var body = document.getElementsByTagName('body')[0]
-body.style.backgroundColor = 'aqua'
+body.style.backgroundColor = '#000000'
+body.style.margin = '50px auto'
+body.style.width = '600px'
+
 
 for (var i=0; i < 81; i++) {
   var square = document.createElement('div')
