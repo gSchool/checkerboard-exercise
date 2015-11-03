@@ -14,6 +14,7 @@ var makeBoxes = function() {
     div.style.float = "left";
 
     var body = document.getElementsByTagName("body");
+    body.style.margin = '0'
 
     if(i % 2 === 0){
       // making even tiles red
