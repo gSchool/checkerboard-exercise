@@ -1,23 +1,44 @@
 // Your JS goes here
 // Set the random colors
-var randRedColor =
+var randDegree = Math.floor((Math.random() * 364));
+
+var randRedColor1 =
+"rgb(" + Math.floor((Math.random() * 255)) +
+"," + Math.floor((Math.random() * 255)) +
+"," + Math.floor((Math.random() * 255)) +
+")";
+
+var randRedColor2 =
   "rgb(" + Math.floor((Math.random() * 255)) +
   "," + Math.floor((Math.random() * 255)) +
   "," + Math.floor((Math.random() * 255)) +
   ")";
 
-  var randBlackColor =
-    "rgb(" + Math.floor((Math.random() * 255)) +
-    "," + Math.floor((Math.random() * 255)) +
-    "," + Math.floor((Math.random() * 255)) +
-    ")";
+// 'linear-gradient(135deg,red,blue)'
+var randRedColorStr = 'linear-gradient(' + randDegree + 'deg,' + randRedColor1 + ',' + randRedColor2 + ')';
+console.log(randRedColorStr);
+
+var randBlackColor1 =
+  "rgb(" + Math.floor((Math.random() * 255)) +
+  "," + Math.floor((Math.random() * 255)) +
+  "," + Math.floor((Math.random() * 255)) +
+  ")";
+
+var randBlackColor2 =
+  "rgb(" + Math.floor((Math.random() * 255)) +
+  "," + Math.floor((Math.random() * 255)) +
+  "," + Math.floor((Math.random() * 255)) +
+  ")";
+
+// 'linear-gradient(135deg,red,blue)'
+var randBlackColorStr = 'linear-gradient(' + randDegree + 'deg,' + randBlackColor1 + ',' + randBlackColor2 + ')';
 
 function GetRedSquare(){
   var redSquare = document.createElement('div');
   redSquare.style.width = '11.1%';
   redSquare.style.paddingBottom = '11.1%';
   redSquare.style.float = 'left';
-  redSquare.style.backgroundColor = randRedColor;
+  redSquare.style.background = randRedColorStr;
   return redSquare;
 }
 
@@ -26,7 +47,7 @@ function GetBlackSquare(){
   blackSquare.style.width = '11.1%';
   blackSquare.style.paddingBottom = '11.1%';
   blackSquare.style.float = 'left';
-  blackSquare.style.backgroundColor = randBlackColor;
+  blackSquare.style.background = randBlackColorStr;
   return blackSquare;
 }
 
