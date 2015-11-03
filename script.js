@@ -13,10 +13,11 @@ for(i=0;i<108;i++){
   box.style.height = '11.1%';
   box.style.float = "left";
 
-  if(i%2===0){
-    box.style.backgroundColor = "black";
-  } else {
-    box.style.backgroundColor = "red";
-  }
+  var hex = '#';
+  for(k=0;k<6;k++){
+  hex += Math.floor(Math.random()*10);
+}
+  box.style.backgroundColor = hex;
+
   document.body.appendChild(box);
 }
