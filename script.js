@@ -22,7 +22,8 @@ prop = function(r,g,b,body){
   N.style.backgroundColor = "rgb("+r+","+g+","+b+")";
   body.appendChild(N);
 }
-
+//Light Blue 65	185	250
+//Purple 188	58	253
 g
 
 var body = document.getElementsByTagName('body')[0];
@@ -33,15 +34,30 @@ body.style.margin = "0px";
 var col = 9;
 var row = 7;
 var count = 1;
+var r = 65;
+var g = 185;
+var b = 250;
+
+var pr = 188;
+var pg = 58;
+var pb = 253;
+var increment =10;
 //Random Colors
-for(var i=0; i < row*col; i++){
-      var r = Math.floor(Math.random()*256);
-      console.log(r);
-      var g = Math.floor(Math.random()*256);
-      console.log(g);
-      var b = Math.floor(Math.random()*256);
-      console.log(b);
-      prop(r,g,b,body);
+for(var i=0; i < row; i++){
+      for (var j = 0; j < col; j++) {
+        if(j%2 ==0){
+          prop(r,g,b,body);
+        }
+        else{
+          prop(pr,pg,pb,body);
+        }
+      }
+      r += -1*increment;
+      g += increment;
+      b += increment;
+      pr += 5*increment;
+      pg += increment;
+      pb += increment;
       // body.appendChild(divRed);
 
 }
