@@ -8,11 +8,8 @@ while (i<99) {
   tile.style.float = "left"
   tile.style.margin = "0";
   tile.style.paddingBottom = "11.1%";
-  if(i % 2 === 0){
-    tile.style.backgroundColor = "black";
-  } else {
-    tile.style.backgroundColor = "red";
-  }
+  var ranColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+  tile.style.backgroundColor = ranColor;
   document.body.appendChild(tile);
   i++;
 }
