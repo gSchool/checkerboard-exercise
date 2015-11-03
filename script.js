@@ -10,8 +10,20 @@ for (var i = 0; i < 9 * 7; i ++)
   var div = document.createElement('div');
   div.style.width = div.style.paddingBottom = '11.1%';
   div.style.float = 'left';
-  div.style.backgroundColor = (i % 2 === 0) ? 'blue' : 'red';
-  div.style.opacity = '0.5';
+  div.id = 'div' + i;
   body.appendChild(div);
 }
-body.style.backgroundImage = 'linear-gradient(to top, #55c6ee, #f90067)';
+var audio = document.createElement('audio');
+var source = document.createElement('source');
+source.src = 'sound/trippy.mp3';
+audio.appendChild(source);
+audio.autoplay = 'autoplay';
+body.appendChild(audio);
+
+(function changeColors() {
+  for (var i = 0; i < 9 * 7; i ++) {
+    var div = document.getElementById('div' + i);
+    div.style.backgroundColor = 'rgb(' + [ran(), ran(), ran()].join(', ') + ')';
+  }
+  setTimeout(changeColors, 2000);
+})();
