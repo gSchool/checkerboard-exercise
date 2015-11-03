@@ -6,9 +6,6 @@ makeBoxes();
 
 var makeBoxes = function() {
 
-  var all = 
-
-
   for (var i = 0; i < 90; i++){
     //creating the boxes
     var div = document.createElement('div');
