@@ -12,6 +12,6 @@ for (var x=0; x<81; x++){
   div.style.height = div.style.width;
   div.style.paddingBottom = '11.1%';
   div.style.float = "left";
-  div.style.backgroundColor = x%2 === 1 ? 'red' : 'black';
+  div.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
   body.appendChild(div);
 }
