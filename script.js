@@ -15,3 +15,13 @@ for (var x=0; x<81; x++){
   div.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
   body.appendChild(div);
 }
+
+
+function redraw(){
+  var divs = document.getElementsByTagName('div');
+  for (var i=0; i<divs.length; i++){
+    divs[i].style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+  }
+}
+
+setInterval(redraw, 2000);
