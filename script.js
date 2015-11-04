@@ -14,3 +14,6 @@ var i = 0;
   document.body.appendChild(tile);
   i++;
 }
+
+
+//background: linear-gradient(top,  #2E2E28 0%,#4D4C48 100%);
