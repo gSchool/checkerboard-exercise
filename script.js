@@ -1,6 +1,6 @@
 window.onload = function () {
 //making it show on the screen
-makeBoxes();
+makeBoxesRandom();
 
 };
 
@@ -31,3 +31,17 @@ var makeBoxes = function() {
     }
   }
 };
+
+var makeBoxesRandom = function() {
+
+   for (var i = 0; i < 90; i++){
+     //creating the boxes
+     var div = document.createElement('div');
+     div.style.width = '11.1%';
+     div.style.height = "100px";
+     div.style.float = "left";
+     var ran = '#'+Math.floor(Math.random()*16777216).toString(16);
+     div.style.backgroundColor = ran;
+     document.body.appendChild(div);
+   }
+ };
