@@ -2,33 +2,22 @@
 // Set the random colors
 var randDegree = Math.floor((Math.random() * 364));
 
-var randRedColor1 =
-"rgb(" + Math.floor((Math.random() * 255)) +
-"," + Math.floor((Math.random() * 255)) +
-"," + Math.floor((Math.random() * 255)) +
-")";
-
-var randRedColor2 =
-  "rgb(" + Math.floor((Math.random() * 255)) +
+function GetRandColor(){
+  return "rgb(" + Math.floor((Math.random() * 255)) +
   "," + Math.floor((Math.random() * 255)) +
   "," + Math.floor((Math.random() * 255)) +
   ")";
+}
+
+var randRedColor1 = GetRandColor();
+var randRedColor2 = GetRandColor();
 
 // 'linear-gradient(135deg,red,blue)'
 var randRedColorStr = 'linear-gradient(' + randDegree + 'deg,' + randRedColor1 + ',' + randRedColor2 + ')';
 console.log(randRedColorStr);
 
-var randBlackColor1 =
-  "rgb(" + Math.floor((Math.random() * 255)) +
-  "," + Math.floor((Math.random() * 255)) +
-  "," + Math.floor((Math.random() * 255)) +
-  ")";
-
-var randBlackColor2 =
-  "rgb(" + Math.floor((Math.random() * 255)) +
-  "," + Math.floor((Math.random() * 255)) +
-  "," + Math.floor((Math.random() * 255)) +
-  ")";
+var randBlackColor1 = GetRandColor();
+var randBlackColor2 = GetRandColor();
 
 // 'linear-gradient(135deg,red,blue)'
 var randBlackColorStr = 'linear-gradient(' + randDegree + 'deg,' + randBlackColor1 + ',' + randBlackColor2 + ')';
