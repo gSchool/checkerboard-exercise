@@ -1,23 +1,19 @@
 // Your JS goes here
 // Set the random colors
-var randRedColor =
-  "rgb(" + Math.floor((Math.random() * 255)) +
+
+function GetRandColor() {
+  return "rgb(" + Math.floor((Math.random() * 255)) +
   "," + Math.floor((Math.random() * 255)) +
   "," + Math.floor((Math.random() * 255)) +
   ")";
-
-  var randBlackColor =
-    "rgb(" + Math.floor((Math.random() * 255)) +
-    "," + Math.floor((Math.random() * 255)) +
-    "," + Math.floor((Math.random() * 255)) +
-    ")";
+}
 
 function GetRedSquare(){
   var redSquare = document.createElement('div');
   redSquare.style.width = '11.1%';
   redSquare.style.paddingBottom = '11.1%';
   redSquare.style.float = 'left';
-  redSquare.style.backgroundColor = randRedColor;
+  redSquare.style.backgroundColor = GetRandColor();
   return redSquare;
 }
 
@@ -26,7 +22,7 @@ function GetBlackSquare(){
   blackSquare.style.width = '11.1%';
   blackSquare.style.paddingBottom = '11.1%';
   blackSquare.style.float = 'left';
-  blackSquare.style.backgroundColor = randBlackColor;
+  blackSquare.style.backgroundColor = GetRandColor();
   return blackSquare;
 }
 
