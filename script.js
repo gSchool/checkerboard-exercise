@@ -9,25 +9,16 @@ function GetRandColor(){
   ")";
 }
 
-var randRedColor1 = GetRandColor();
-var randRedColor2 = GetRandColor();
-
-// 'linear-gradient(135deg,red,blue)'
-var randRedColorStr = 'linear-gradient(' + randDegree + 'deg,' + randRedColor1 + ',' + randRedColor2 + ')';
-console.log(randRedColorStr);
-
-var randBlackColor1 = GetRandColor();
-var randBlackColor2 = GetRandColor();
-
-// 'linear-gradient(135deg,red,blue)'
-var randBlackColorStr = 'linear-gradient(' + randDegree + 'deg,' + randBlackColor1 + ',' + randBlackColor2 + ')';
+var randColor1 = GetRandColor();
+var randColor2 = GetRandColor();
 
 function GetRedSquare(){
   var redSquare = document.createElement('div');
   redSquare.style.width = '11.1%';
   redSquare.style.paddingBottom = '11.1%';
   redSquare.style.float = 'left';
-  redSquare.style.background = randRedColorStr;
+  redSquare.style.backgroundColor = randColor1;
+  redSquare.style.opacity = '0.5';
   return redSquare;
 }
 
@@ -36,7 +27,8 @@ function GetBlackSquare(){
   blackSquare.style.width = '11.1%';
   blackSquare.style.paddingBottom = '11.1%';
   blackSquare.style.float = 'left';
-  blackSquare.style.background = randBlackColorStr;
+  blackSquare.style.backgroundColor = randColor2;
+  blackSquare.style.opacity = '0.5';
   return blackSquare;
 }
 
@@ -77,3 +69,6 @@ for (var i = 0; i < 8; i++) {
     mainBody.appendChild( GetRow(false) );
   }
 }
+
+// add the gradient
+mainBody.style.background = 'linear-gradient(' + randDegree + 'deg,black,white)';
