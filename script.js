@@ -19,15 +19,10 @@ var makeBoxes = function() {
     if(i % 2 === 0){
       // making even tiles red
       div.style.backgroundColor = "red";
-      div.id = i;
-      document.body.appendChild(div);
-    }
-
-    else {
+    }else {
       //making odd tiles black
       div.style.backgroundColor = "black";
-      div.id = i;
-      document.body.appendChild(div);
     }
+    document.body.appendChild(div);
   }
 };
