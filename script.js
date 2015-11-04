@@ -10,7 +10,7 @@ var makeBoxes = function() {
     //creating the boxes
     var div = document.createElement('div');
     div.style.width = '11.1%';
-    div.style.height = "40px";
+    div.style.height = "100px";
     div.style.float = "left";
 
     var body = document.getElementsByTagName("body");
