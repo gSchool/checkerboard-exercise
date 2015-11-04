@@ -26,6 +26,7 @@ function checkerboard (){
       checker.style.float = 'left';
     }
 
+
 };
 
 
