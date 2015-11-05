@@ -1,3 +1,4 @@
+
 document.body.onload = checkerboard;
 
 function checkerboard (){
@@ -19,18 +20,17 @@ function checkerboard (){
       }
         if (flip){
           if (i % 2 == 0){
-          checker.style.backgroundColor = 'red';
+          checker.style.backgroundColor = 'hsla(' + 40 + i + ' , 90%, 80%, 0.8)';
         } else {
-          checker.style.backgroundColor = 'black';
+          checker.style.backgroundColor = 'hsla(262, 15%, ' + i + '%, 0.8)';
         }
       } else {
         if (i % 2 == 0){
-          checker.style.backgroundColor = 'black';
+          checker.style.backgroundColor = 'hsla(262, 15%, ' + i + '%, 0.8)';
         } else {
-          checker.style.backgroundColor = 'red';
+          checker.style.backgroundColor = 'hsla(' + 40 + i + ' , 90%, 80%, 0.8)';
         }
       }
-        checker.style.display = 'inline-block';
         checker.style.float = 'left';
     };
 
