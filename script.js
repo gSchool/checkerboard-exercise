@@ -1,21 +1,34 @@
 // Your JS goes here
 
 var body = document.getElementsByTagName("body")[0];
-var redTile = document.createElement("div");
-var blackTile = document.createElement("div");
+var redTile1 = document.createElement("div");
+var blackTile1 = document.createElement("div");
+var redTile2 = document.createElement("div");
+var blackTile2 = document.createElement("div");
+
+body.appendChild(redTile1);
+body.appendChild(blackTile1);
+body.appendChild(redTile2);
+body.appendChild(blackTile2);
 
 
-body.appendChild(redTile);
-body.appendChild(blackTile);
+redTile1.style.backgroundColor = "red";
+redTile1.style.paddingBottom = "11.1%";
+redTile1.style.width = "11.1%";
+redTile1.style.float = "left";
 
-redTile.style.backgroundColor = "red";
-redTile.style.paddingBottom = "11.1%";
-redTile.style.width = "11.1%";
-redTile.style.float = "left";
-redTile.style.position = "relative";
 
-blackTile.style.backgroundColor = "black";
-blackTile.style.paddingBottom = "11.1%";
-blackTile.style.width = "11.1%";
-blackTile.style.float = "left";
-blackTile.style.position = "relative";
+blackTile1.style.backgroundColor = "black";
+blackTile1.style.paddingBottom = "11.1%";
+blackTile1.style.width = "11.1%";
+blackTile1.style.float = "left";
+
+redTile2.style.backgroundColor = "red";
+redTile2.style.paddingBottom = "11.1%";
+redTile2.style.width = "11.1%";
+redTile2.style.float = "left";
+
+blackTile2.style.backgroundColor = "black";
+blackTile2.style.paddingBottom = "11.1%";
+blackTile2.style.width = "11.1%";
+blackTile2.style.float = "left";
