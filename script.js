@@ -1,7 +1,7 @@
 // Your JS goes here
 
 for(i=0; i<9; i++) {
-  if(i % 2 === 0) {
+  if(i % 2 === 1) {
     for(x=0; x<9 ; x++) {
       var newTile = document.createElement('div');
       var body = document.getElementsByTagName('body');
@@ -18,7 +18,7 @@ for(i=0; i<9; i++) {
       }
     }
   }
-  if(i % 2 === 1) {
+  if(i % 2 === 0) {
     for(x=0; x<9 ; x++) {
       var newTile = document.createElement('div');
       var body = document.getElementsByTagName('body');
