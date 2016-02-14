@@ -9,6 +9,6 @@ for(i=0; i<9; i++) {
     newTile.style.width = "11.1%";
     newTile.style.paddingBottom = "11.1%";
     newTile.style.float = "left";
-    newTile.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    newTile.style.backgroundColor = '#'+ Math.floor(Math.random() * 16777215).toString(16);
   }
 }
