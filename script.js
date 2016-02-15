@@ -19,5 +19,3 @@ for (var i = 0; i < 63; i++) {
     body.appendChild(black);
   } else { body.appendChild(red)}
 }
-
-// randomcolor
