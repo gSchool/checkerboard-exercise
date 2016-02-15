@@ -1,41 +1,32 @@
 // Your JS goes here
 
+var body = document.querySelector('body');
+body.style.marginLeft= "-5px";
+body.style.marginRight= "-5px";
+body.style.marginTop= "-5px";
+
 for (var i = 0; i < 63; i++) {
 
-  var intervalBlue = setInterval(function () {
-  var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
-  return blue.style.backgroundColor = randomColors;
-}, 2000);
+function changeColor() {
+  var interval = setInterval(change, 1000);
+}
 
-  var intervalPink = setInterval(function () {
-  var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
-  return pink.style.backgroundColor = randomColors;
-}, 2000);
+function change () {
+  blue.style.backgroundColor = randomColors;
+}
 
-  var body = document.querySelector('body');
-  body.style.marginLeft= "-5px";
-  body.style.marginRight= "-5px";
-  body.style.marginTop= "-5px";
+  var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
 
   var blue = document.createElement('div');
   blue.style.width = "11.1%";
   blue.style.float = "left";
   blue.style.paddingBottom = "11.1%";
-  blue.style.backgroundColor = intervalBlue;
+  blue.style.backgroundColor = changeColor;
 
-  var pink = document.createElement('div');
-  pink.style.width = "11.1%";
-  pink.style.float = "left";
-  pink.style.paddingBottom = "11.1%";
-  pink.style.backgroundColor = intervalPink;
-
-  if(i % 2 == 0) {
   body.appendChild(blue);
-  } else {
-    body.appendChild(pink);
-  }
 
-  var audio = new Audio ('audioChoro.mp3');
-  audio.play();
-  body.appendChild(audio);
 };
+
+var audio = new Audio ('audioChoro.mp3');
+audio.play();
+body.appendChild(audio);
