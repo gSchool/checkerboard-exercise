@@ -1,9 +1,7 @@
 // Your JS goes here
 
 for (var i = 0; i < 63; i++) {
-
-  // var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
-
+  
   var intervalBlue = setInterval(function () {
   var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   return blue.style.backgroundColor = randomColors;
