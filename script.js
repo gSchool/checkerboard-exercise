@@ -1,7 +1,7 @@
 // Your JS goes here
 
 for (var i = 0; i < 63; i++) {
-  
+
   var intervalBlue = setInterval(function () {
   var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   return blue.style.backgroundColor = randomColors;
@@ -36,22 +36,3 @@ for (var i = 0; i < 63; i++) {
   }
 
 };
-
-
-
-
-//
-// function whatIsTheKeyToSusccess (n) {
-//   var iteration = 0;
-//
-//    var interval = setInterval(function () {
-//     if (iteration >= n) {
-//       console.log('I\'m DJ Khaled, THE BEST');
-//       return clearInterval(interval);
-//     }
-//
-//     console.log("Another one!");
-//     iteration++;
-//   }, 500);
-// }
-// whatIsTheKeyToSusccess(3);
