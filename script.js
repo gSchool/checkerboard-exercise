@@ -10,4 +10,6 @@ for (var i = 0; i < 63; i++) {
   square.style.float = 'left';
   square.style.paddingBottom = '11.1%';
   square.style.backgroundColor = 'blue';
+
+  body.appendChild('square');
 }
