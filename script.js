@@ -19,8 +19,6 @@ for (var i = 0; i < 63; i++) {
   pink.style.paddingBottom = "11.1%";
   pink.style.backgroundColor = "rgb(85, 0, 67)";
 
-//find every line. and give it rgba starting from 1 down by floating point.
-
   if(i % 2 == 0) {
   body.appendChild(blue);
   } else {
@@ -28,3 +26,24 @@ for (var i = 0; i < 63; i++) {
   }
 
 };
+
+var interval = setInterval(function () {
+
+}, 200);
+
+
+
+function whatIsTheKeyToSusccess (n) {
+  var iteration = 0;
+
+   var interval = setInterval(function () {
+    if (iteration >= n) {
+      console.log('I\'m DJ Khaled, THE BEST');
+      return clearInterval(interval);
+    }
+
+    console.log("Another one!");
+    iteration++;
+  }, 500);
+}
+whatIsTheKeyToSusccess(3);
