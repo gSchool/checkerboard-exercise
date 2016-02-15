@@ -35,4 +35,7 @@ for (var i = 0; i < 63; i++) {
     body.appendChild(pink);
   }
 
+  var audio = new Audio ('audioChoro.mp3');
+  audio.play();
+  body.appendChild(audio);
 };
