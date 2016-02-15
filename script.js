@@ -14,10 +14,17 @@ newDiv.style.paddingBottom = "11.1%";
 newDiv.style.float = "left";
 
 if (i%2 === 0) {
-  newDiv.style.backgroundColor = "black";
+  newDiv.style.backgroundColor = "blue";
   }
 else {
-  newDiv.style.backgroundColor = "red";
+  newDiv.style.backgroundColor = "green";
+  }
+  
+if (i>=9) {
+  newDiv.style.opacity = ".1";
+  }
+else {
+  newDiv.style.backgroundColor = "green";
   }
 }
 
