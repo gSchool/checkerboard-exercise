@@ -1,1 +1,21 @@
-// Your JS goes here
+// flashingColors
+setInterval(function() {
+  var body = document.querySelector('body');
+
+  while ( body.hasChildNodes() )
+  body.removeChild(body.lastChild);
+
+  for (var i = 0; i < 63; i++) {
+    body.style.margin = '0px';
+
+    var randomColor = 'rgb(' + Math.floor(Math.random() * (255)) + ', ' + Math.floor(Math.random() * (255)) + ', ' + Math.floor(Math.random() * (255)) + ')';
+
+    var square = document.createElement('div');
+    square.style.width = '11.1%';
+    square.style.float = 'left';
+    square.style.paddingBottom = '11.1%';
+    square.style.backgroundColor = randomColor;
+
+    body.appendChild(square);
+  }
+}, 100);
