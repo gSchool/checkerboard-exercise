@@ -2,6 +2,18 @@
 
 for (var i = 0; i < 63; i++) {
 
+  // var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
+
+  var intervalBlue = setInterval(function () {
+  var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
+  return blue.style.backgroundColor = randomColors;
+}, 2000);
+
+  var intervalPink = setInterval(function () {
+  var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
+  return pink.style.backgroundColor = randomColors;
+}, 2000);
+
   var body = document.querySelector('body');
   body.style.marginLeft= "-5px";
   body.style.marginRight= "-5px";
@@ -11,13 +23,13 @@ for (var i = 0; i < 63; i++) {
   blue.style.width = "11.1%";
   blue.style.float = "left";
   blue.style.paddingBottom = "11.1%";
-  blue.style.backgroundColor = "rgb(1, 13, 66)";
+  blue.style.backgroundColor = intervalBlue;
 
   var pink = document.createElement('div');
   pink.style.width = "11.1%";
   pink.style.float = "left";
   pink.style.paddingBottom = "11.1%";
-  pink.style.backgroundColor = "rgb(85, 0, 67)";
+  pink.style.backgroundColor = intervalPink;
 
   if(i % 2 == 0) {
   body.appendChild(blue);
@@ -27,23 +39,21 @@ for (var i = 0; i < 63; i++) {
 
 };
 
-var interval = setInterval(function () {
-
-}, 200);
 
 
 
-function whatIsTheKeyToSusccess (n) {
-  var iteration = 0;
-
-   var interval = setInterval(function () {
-    if (iteration >= n) {
-      console.log('I\'m DJ Khaled, THE BEST');
-      return clearInterval(interval);
-    }
-
-    console.log("Another one!");
-    iteration++;
-  }, 500);
-}
-whatIsTheKeyToSusccess(3);
+//
+// function whatIsTheKeyToSusccess (n) {
+//   var iteration = 0;
+//
+//    var interval = setInterval(function () {
+//     if (iteration >= n) {
+//       console.log('I\'m DJ Khaled, THE BEST');
+//       return clearInterval(interval);
+//     }
+//
+//     console.log("Another one!");
+//     iteration++;
+//   }, 500);
+// }
+// whatIsTheKeyToSusccess(3);
