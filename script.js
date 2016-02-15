@@ -1,3 +1,4 @@
+var interval =  setInterval(function(){
 var body  = document.querySelector('body');
 for (var i = 0; i < 2000; i++) {
 var newDiv = document.createElement('div');
@@ -18,23 +19,21 @@ if (i%2 === 0) {
   }
 else {
   newDiv.style.backgroundColor = "red";
+    }
   }
-}
+}, 1000);
 
+clearInterval(interval);
 
-
-
+// function flasher (n) {
+//   var iteration = 0;
 //
-// var newImg = document.createElement("img");
-// newImg.src = "http://placekitten.com/345/543";
-// var newH1 = document.createElement("h1");
-// var newP = document.createElement("p");
+//    var interval = setInterval(function () {
+//     if (iteration >= 63) {
 //
-// var body = document.getElementsByTagName("body")[0];
-// body.appendChild(newImg);
-// body.appendChild(newH1);
-// body.appendChild(newP);
+//     }
 //
-// newH1.innerText = "Cats have invaded";
-// newImg.src = "http://placekitten.com/444/567";
-// newP.innerText = "We're here to take over!";
+//     console.log("Another one!");
+//     iteration++;
+//   }, 500);
+// }
