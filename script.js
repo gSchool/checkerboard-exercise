@@ -1,4 +1,4 @@
-// checkerboard
+// randomcolors
 for (var i = 0; i < 63; i++) {
   var body = document.querySelector('body');
   body.style.margin = '0px';
@@ -19,5 +19,3 @@ for (var i = 0; i < 63; i++) {
     body.appendChild(black);
   } else { body.appendChild(red)}
 }
-
-// randomcolor
