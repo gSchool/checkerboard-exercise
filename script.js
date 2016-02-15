@@ -1,28 +1,30 @@
 // Your JS goes here
 
 for (var i = 0; i < 63; i++) {
-  var randomColors = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
 
   var body = document.querySelector('body');
   body.style.marginLeft= "-5px";
   body.style.marginRight= "-5px";
   body.style.marginTop= "-5px";
 
-  var black = document.createElement('div');
-  black.style.width = "11.1%";
-  black.style.float = "left";
-  black.style.paddingBottom = "11.1%";
-  black.style.backgroundColor = randomColors;
+  var blue = document.createElement('div');
+  blue.style.width = "11.1%";
+  blue.style.float = "left";
+  blue.style.paddingBottom = "11.1%";
+  blue.style.backgroundColor = "rgb(1, 13, 66)";
 
-  var red = document.createElement('div');
-  red.style.width = "11.1%";
-  red.style.float = "left";
-  red.style.paddingBottom = "11.1%";
-  red.style.backgroundColor = randomColors;
+  var pink = document.createElement('div');
+  pink.style.width = "11.1%";
+  pink.style.float = "left";
+  pink.style.paddingBottom = "11.1%";
+  pink.style.backgroundColor = "rgb(85, 0, 67)";
+
+//find every line. and give it rgba starting from 1 down by floating point.
 
   if(i % 2 == 0) {
-  body.appendChild(black);
+  body.appendChild(blue);
   } else {
-    body.appendChild(red);
+    body.appendChild(pink);
   }
+
 };
