@@ -1,53 +1,37 @@
 
 window.addEventListener('load', function(){
 
+  var body = document.body;
+  body.style.margin = '0';
 
-  setInterval(function(){
+  var bgDiv = document.createElement('div');
 
+  bgDiv.style.width  = '100vw';
+  bgDiv.style.height = '100vh';
+  bgDiv.style.position = 'fixed';
 
+  bgDiv.style.background = '-webkit-linear-gradient(top, rgba(0, 0, 255, 0.8), rgba(255, 255, 255, 0))';
 
-    function generateColors() {
-      var letters = '0123456789ABCDEF'.split('');
-      var hex = '#';
+  body.appendChild(bgDiv);
 
-      for (var i = 0; i < 6; i++ ) {
-        hex += letters[Math.floor(Math.random() * 16)];
+  var boxes = [];
 
-      }
-      return hex;
-    }
+  for(var i=0; i<=53; i++){
 
+    var box1 = document.createElement('div');
+    var box2 = document.createElement('div');
 
+    box1.style.backgroundColor = 'seagreen';
+    box2.style.backgroundColor = 'coral';
 
+    boxes.push(box1, box2);
 
-    var body = document.body;
+    boxes[i].style.float = 'left';
+    boxes[i].style.width = '11.1%';
+    boxes[i].style.paddingBottom = '11.1%';
 
-    body.style.margin = '0';
-
-    while(body.hasChildNodes())
-    body.removeChild(body.lastChild);
-
-    var boxes = [];
-
-
-
-    for(var i=0; i<=53; i++){
-
-      var box = document.createElement('div');
-
-      boxes.push(box);
-
-      boxes[i].style.backgroundColor = generateColors();
-      boxes[i].style.float = 'left';
-      boxes[i].style.width = '11.1%';
-      boxes[i].style.paddingBottom = '11.1%';
-
-      body.appendChild(boxes[i]);
-    }
-
-  }, 2000);
-
-
+    body.appendChild(boxes[i]);
+  }
 
 });
 
