@@ -8,7 +8,7 @@ var boxTwo = document.createElement("div");
   body.style.marginBottom = "-4px";
   body.style.marginLeft = "-4px";
   body.style.marginRight = "-4px";
-  body.style.marginTop = "-4px";
+  body.style.marginTop = "-4px"; 
 
   body.appendChild(boxOne);
   body.appendChild(boxTwo);
