@@ -1,7 +1,5 @@
 // Your JS goes here
 
-
-
 for( var i = 0; i < 256; i++ ) {
 
   var divOdd = document.createElement('div');
