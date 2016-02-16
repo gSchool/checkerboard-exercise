@@ -4,11 +4,8 @@ function checkerBoard() {
     checkBox.style.width = '11.1%';
     checkBox.style.float = 'left';
     checkBox.style.paddingBottom = '11.1%';
-    if (i % 2 === 0) {
-      checkBox.style.backgroundColor = 'black';
-    } else {
-      checkBox.style.backgroundColor = 'red';
-    }
+    var colors = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+    checkBox.style.backgroundColor = colors;
     document.body.appendChild(checkBox);
   }
 }
