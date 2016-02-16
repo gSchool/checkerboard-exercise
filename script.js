@@ -25,4 +25,8 @@ var redBox = document.createElement("div");
   } else {
      body.appendChild(redBox);
   }
-};
+var randomColor = 'rgb(' + Math.floor(Math.random() * (255)) + ', ' + Math.floor(Math.random() * (255)) + ', ' + Math.floor(Math.random() * (255)) + ')';
+window.setTimeout( "setbackground()", 2000);
+blackBox.style.backgroundColor = randomColor;
+redBox.style.backgroundColor = randomColor;
+}
