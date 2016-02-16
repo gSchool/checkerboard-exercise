@@ -1,32 +1,65 @@
+// for (var i = 0; i < 63; i++) {
+// var body  = document.querySelector('body');
+// var newDiv = document.createElement('div');
+//
+// body.style.marginLeft = "-4px";
+// body.style.marginRight = "-4px";
+// body.style.marginTop = "-4px";
+// body.style.marginBottom = "-4px";
+//
+// body.appendChild(newDiv);
+//
+// newDiv.style.width = "11.1%";
+// newDiv.style.paddingBottom = "11.1%";
+// newDiv.style.float = "left";
+//
+// body.style.backgroundImage = "linear-gradient(blue, orange)";
+//
+// if (i%2 === 0) {
+//   newDiv.style.backgroundColor = "blue";
+//   newDiv.style.opacity = ".4";
+//   }
+// else {
+//   newDiv.style.backgroundColor = "green";
+//   newDiv.style.opacity = ".4";
+//   }
+// }
 
-
-for (var i = 0; i < 5000; i++) {
+for (var i = 0; i < 101; i++) {
 var body = document.querySelector("body");
+var boxOne = document.createElement("div");
+var boxTwo = document.createElement("div");
+
   body.style.marginBottom = "-4px";
   body.style.marginLeft = "-4px";
   body.style.marginRight = "-4px";
   body.style.marginTop = "-4px";
 
-var blackBox = document.createElement("div");
-  blackBox.style.width = '11.1%';
-  blackBox.style.float ='left';
-  blackBox.style.paddingBottom ='11.1%';
-  blackBox.style.backgroundColor = 'black';
+  body.appendChild(boxOne);
+  body.appendChild(boxTwo);
 
-var redBox = document.createElement("div");
-  redBox.style.width = '11.1%';
-  redBox.style.float = 'left';
-  redBox.style.paddingBottom ='11.1%';
-  redBox.style.backgroundColor = "red";
+  boxOne.style.width = '11.1%';
+  boxOne.style.float ='left';
+  boxOne.style.paddingBottom ='11.1%';
+  boxOne.style.backgroundColor = 'black';
 
+  boxTwo.style.width = '11.1%';
+  boxTwo.style.float = 'left';
+  boxTwo.style.paddingBottom ='11.1%';
+  boxTwo.style.backgroundColor = "red";
+
+  body.style.backgroundImage = 'linear-gradient(black, purple)';
 
   if (i % 2 == 0) {
-     body.appendChild(blackBox);
+     boxOne.style.backgroundColor = 'grey';
+     boxOne.style.opacity = ".4";
   } else {
-     body.appendChild(redBox);
-  }
+    boxTwo.style.backgroundColor = 'purple';
+     boxTwo.style.opacity = ".4";
+   }
+ };
+
 var randomColor = 'rgb(' + Math.floor(Math.random() * (255)) + ', ' + Math.floor(Math.random() * (255)) + ', ' + Math.floor(Math.random() * (255)) + ')';
 window.setTimeout( "setbackground()", 2000);
-blackBox.style.backgroundColor = randomColor;
-redBox.style.backgroundColor = randomColor;
-}
+boxOne.style.backgroundColor = randomColor;
+boxTwo.style.backgroundColor = randomColor;
