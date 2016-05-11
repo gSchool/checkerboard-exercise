@@ -24,7 +24,7 @@ document.body.appendChild(checkBoard);
 checkBoard.appendChild(red);
 checkBoard.appendChild(black);
 //increment i each time
-for (var i = 1; i < 51; i++) {
+for (var i = 0; i < 49; i++) {
   //initialize my clones with the distinctive of i
   var redClone = red.cloneNode(i);
   var blackClone = black.cloneNode(i);
@@ -32,5 +32,6 @@ for (var i = 1; i < 51; i++) {
   //push the distinctive clones to the checkBoard node
   checkBoard.appendChild(redClone);
   checkBoard.appendChild(blackClone);
-
 }
+
+//profit
