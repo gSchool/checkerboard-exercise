@@ -3,8 +3,10 @@
 
 // var body = document.getElementsByTagName('body');
 
+
+
 var checkBoard = document.createElement('div');
-  checkBoard.width = "100%";
+  checkBoard.style.width =  "100%";
 
 var red = document.createElement('div');
   red.style.width = "11.1%";
@@ -24,7 +26,7 @@ document.body.appendChild(checkBoard);
 checkBoard.appendChild(red);
 checkBoard.appendChild(black);
 //increment i each time
-for (var i = 0; i < 49; i++) {
+for (var i = 0; i < 98; i++) {
   //initialize my clones with the distinctive of i
   var redClone = red.cloneNode(i);
   var blackClone = black.cloneNode(i);
@@ -33,5 +35,4 @@ for (var i = 0; i < 49; i++) {
   checkBoard.appendChild(redClone);
   checkBoard.appendChild(blackClone);
 }
-
 //profit
