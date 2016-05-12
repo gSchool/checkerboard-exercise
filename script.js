@@ -3,10 +3,10 @@ var containerDiv = document.createElement('div');
 containerDiv.setAttribute('class', 'container');
 document.body.appendChild(containerDiv);
 
-var blackBox = document.createElement('div');
-blackBox.setAttribute('class', 'odd');
-var redBox = document.createElement('div');
-redBox.setAttribute('class', 'even');
+var oddBox = document.createElement('div');
+oddBox.setAttribute('class', 'odd');
+var evenBox = document.createElement('div');
+evenBox.setAttribute('class', 'even');
 
 // function randomRGB () {
 // 	var number = Math.floor(Math.random() * 255) + 1;
@@ -23,10 +23,10 @@ redBox.setAttribute('class', 'even');
 
 var numberOfBoxes = document.querySelectorAll('.odd').length + document.querySelectorAll('.even').length;
 
-//blackBox rgb variables
-var rOdd = 255;
-var gOdd = 255;
-var bOdd = 100;
+//oddBox rgb variables
+var rOdd = 100;
+var gOdd = 113;
+var bOdd = 180;
 
 //evenBox variables
 var rEven = 255;
@@ -36,19 +36,19 @@ var bEven = 255;
 //console.log(rgb);
 
 while (numberOfBoxes < 81) {
-	var blackBoxClone = blackBox.cloneNode(true);
-  containerDiv.appendChild(blackBoxClone);
+	var oddBoxClone = oddBox.cloneNode(true);
+  containerDiv.appendChild(oddBoxClone);
 	var rgbOdd = 'rgb(' + rOdd + ',' + gOdd + ',' + bOdd + ')';
-  blackBoxClone.style.backgroundColor = rgbOdd;
+  oddBoxClone.style.backgroundColor = rgbOdd;
 	rOdd -= 3;
 	gOdd -= 3
 	console.log(rOdd + "," + gOdd);
   numberOfBoxes += 1;
   if (numberOfBoxes < 81) {
-    var redBoxClone = redBox.cloneNode(true);
-    containerDiv.appendChild(redBoxClone);
+    var evenBoxClone = evenBox.cloneNode(true);
+    containerDiv.appendChild(evenBoxClone);
 		var rgbEven = 'rgb(' + rEven + ',' + gEven + ',' + bEven + ')';
-    redBoxClone.style.backgroundColor = rgbEven;
+    evenBoxClone.style.backgroundColor = rgbEven;
 		rEven -= 3
 		gEven -= 3;
 		console.log(rEven + "," + gEven);
@@ -63,16 +63,16 @@ for (var i = 0; i < containerDivs.length; i++) {
   containerDivs[i].style.float = "left";
 }
 
-var blackBoxes = document.querySelectorAll('.odd');
-for (var i = 0; i < blackBoxes.length; i++) {
-  blackBoxes[i].style.paddingBottom = "11.1%";
-  blackBoxes[i].style.width = "11.1%";
-  blackBoxes[i].style.float = "left";
+var oddBoxes = document.querySelectorAll('.odd');
+for (var i = 0; i < oddBoxes.length; i++) {
+  oddBoxes[i].style.paddingBottom = "11.1%";
+  oddBoxes[i].style.width = "11.1%";
+  oddBoxes[i].style.float = "left";
 }
 
-var redBoxes = document.querySelectorAll('.even');
-for (var i = 0; i < redBoxes.length; i++) {
-  redBoxes[i].style.paddingBottom = "11.1%";
-  redBoxes[i].style.width = "11.1%";
-  redBoxes[i].style.float = "left";
+var evenBoxes = document.querySelectorAll('.even');
+for (var i = 0; i < evenBoxes.length; i++) {
+  evenBoxes[i].style.paddingBottom = "11.1%";
+  evenBoxes[i].style.width = "11.1%";
+  evenBoxes[i].style.float = "left";
 }
