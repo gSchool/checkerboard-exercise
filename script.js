@@ -1,17 +1,19 @@
 // Your JS goes here
-var body = document.getElementsByTagName("body")[0];
-for (var i = 0; i < 36; i++) {
-  var bblock = document.createElement("div");
-  var rblock = document.createElement("div");
-  bblock.style.backgroundColor = "black";
-  bblock.style.width = "11.1%";
-  bblock.style.cssFloat = "left";
-  bblock.style.paddingBottom = "11.1%";
-  rblock.style.backgroundColor = "red";
-  rblock.style.width = "11.1%";
-  rblock.style.cssFloat = "left";
-  rblock.style.paddingBottom = "11.1%";
+function random() {
+    var x = [1,2,3,4,5,6,7,8,9,0,"A","B","C","D","E","F"];
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += x[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
-  body.appendChild(rblock);
-  body.appendChild(bblock);
+var body = document.getElementsByTagName("body")[0];
+for (var i = 0; i < 45; i++) {
+  var block = document.createElement("div");
+  block.style.backgroundColor = random();
+  block.style.width = "11.1%";
+  block.style.cssFloat = "left";
+  block.style.paddingBottom = "11.1%";
+  body.appendChild(block);
 }
