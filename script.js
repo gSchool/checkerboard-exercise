@@ -24,13 +24,14 @@ function colorRed(div){
 }
 
 function colorRandom(div){
-  div.style.backgroundColor = makeHexaDec();
+  var hexaDec = makeHexaDec();
+  div.style.backgroundColor = hexaDec;
 }
 
 function makeHexaDec(){
   var hexaDec = '#';
   for(i = 0; i < 6; i ++){
-    var number = Math.floor(Math.random()*16);
+    var number = Math.floor(Math.random()*15);
     var choices = ['1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
     var char = choices[number];
     hexaDec += char;
