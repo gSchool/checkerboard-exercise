@@ -25,3 +25,7 @@ setInterval(function(){
     divs[i].style.backgroundColor = hex();
   }
 }, 2000);
+
+var audio = document.createElement("AUDIO");
+audio.autoplay = true;
+audio.src = "https://upload.wikimedia.org/wikipedia/en/0/03/Rayman_2_soundtrack_1.ogg";
