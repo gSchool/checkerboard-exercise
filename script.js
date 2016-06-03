@@ -17,4 +17,4 @@ setInterval(function() {
   checker.style.height = '11.1%';
   container.appendChild(checker);
 }
-}, 1000);
+}, 2000);
