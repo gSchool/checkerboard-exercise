@@ -1,8 +1,8 @@
 var bodyToAppend = document.getElementsByTagName('body')[0];
 var bodyDivBackground = document.createElement('div');
 
-bodyDivBackground.style.padding = '0';
-bodyDivBackground.style.margin ='0';
+bodyToAppend.style.padding = '0';
+bodyToAppend.style.margin ='0';
 bodyDivBackground.style.background= "-webkit-linear-gradient(bottom, rgba(255,255,255,0),#3CC9FA)";
 bodyDivBackground.style.position ='absolute';
 bodyDivBackground.style.zIndex ='+1';
