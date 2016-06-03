@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded',function(){
     div.style.backgroundColor = makeHexaDec();
     document.body.appendChild(div);
   }
+  var intervalID = window.setInterval(function(){
+    var number = Math.floor(Math.random()*80);
+    for(var i = 1; i < 82 ; i++){
+      var div = document.body.children[i];
+      div.style.backgroundColor = makeHexaDec();
+    }
+  },2000);
 })
 
 function addDivStyle(div){
