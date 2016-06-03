@@ -1,5 +1,6 @@
 var bodyToAppend = document.getElementsByTagName('body')[0];
-// window.onload = changeColor();
+var audio = new Audio('audio/03-the-riders-of-rohan.mp3');
+audio.play();
 
 bodyToAppend.style.margin ='0px';
 bodyToAppend.style.padding ='0px';
