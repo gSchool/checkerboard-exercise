@@ -1,6 +1,4 @@
-// Your JS goes here
 var bodyToAppend = document.getElementsByTagName('body')[0];
-var newArr = [];
 
 function createBoxes(){
   for (var i = 0; i < 80; i++) {
@@ -11,16 +9,20 @@ function createBoxes(){
     newBox[i].style.float = 'left';
     newBox[i].style.paddingBottom = '11.1%';
     if(i%2 === 0){
-      console.log('work');
-      newBox[i].style.backgroundColor = '#000000';
+      newBox[i].style.backgroundColor = randomColor();
     }else {
-      newBox[i].style.backgroundColor ='red';
+      newBox[i].style.backgroundColor = randomColor();
     }
     bodyToAppend.appendChild(newBox[i]);
   }
-  // var newBlackBox = document.createElement('div');
-  // var newRedBox = document.createElement('div');
-
 }
-
 createBoxes();
+
+function randomColor() {
+    var colorLetter = '0123456789ABCDEF'.split('');
+    var colorTotal = '#';
+    for (var i = 0; i < 6; i++ ) {
+        colorTotal += colorLetter[Math.floor(Math.random() * 16)];
+    }
+    return colorTotal;
+}
