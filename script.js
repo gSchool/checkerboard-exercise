@@ -1,17 +1,18 @@
 var bodyToAppend = document.getElementsByTagName('body')[0];
 var audio = new Audio('audio/03-the-riders-of-rohan.mp3');
-audio.play();
-
+audio.loop = true;
 bodyToAppend.style.margin ='0px';
 bodyToAppend.style.padding ='0px';
+audio.play();
 createBoxes();
+
 setInterval(function () {
   bodyToAppend.innerHTML = '';
   createBoxes();
 }, 2000);
 
 function createBoxes(){
-  for (var i = 0; i < 80; i++) {
+  for (var i = 0; i < 81; i++) {
     var newBox = [];
     newBox[i] = document.createElement('div');
     newBox[i].style.width = '11.1%';
@@ -35,3 +36,4 @@ function randomColor() {
     }
     return colorTotal;
 }
+console.log('Music Provided by the Master, Howard Shore');
