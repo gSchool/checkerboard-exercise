@@ -4,11 +4,7 @@ document.addEventListener('DOMContentLoaded',function(){
   for(i = 0; i < 81; i ++){
     var div = document.createElement('div');
     addDivStyle(div);
-    if(i%2 === 0){
-      colorBlack(div);
-    } else {
-      colorRed(div);
-    };
+    colorRandom(div);
     document.body.appendChild(div);
   }
 })
@@ -25,4 +21,18 @@ function colorBlack(div){
 
 function colorRed(div){
   div.style.backgroundColor = 'red';
+}
+
+function colorRandom(div){
+  div.style.backgroundColor = makeHexaDec();
+}
+
+function makeHexaDec(){
+  var hexaDec = '#';
+  for(i = 0; i < 6; i ++){
+    var number = Math.floor(Math.random()*16);
+    var choices = ['1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+    var char = choices[number];
+    hexaDec += char;
+  }; return hexaDec;
 }
