@@ -12,7 +12,6 @@ for (var i = 0; i < 81; i++) {
   square.style.height="100px"
   square.style.display="inline-block"
   square.style.backgroundColor = '#'+Math.random().toString(16).slice(2,8).toUpperCase();
-  // i%2===0 ? square.style.backgroundColor = "red" : square.style.backgroundColor = "black"
   square.style.padding = 0
   square.style.marginBottom = "-5px"
   document.getElementById('container').appendChild(square)
