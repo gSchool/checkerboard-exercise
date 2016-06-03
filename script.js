@@ -4,19 +4,14 @@ container.style.height = '700px';
 document.body.appendChild(container);
 
 for (var i = 0; i < 81; i++) {
-  if(i % 2 === 0) {
   var checker = document.createElement('div');
-  checker.style.backgroundColor = "black";
+  function randomColor(){
+    return Math.floor(Math.random()*16777215).toString(16);
+  }
+  var checkerColor = ('#' + randomColor());
+  checker.style.backgroundColor = checkerColor;
   checker.style.float = 'left';
   checker.style.width = '11.1%';
   checker.style.height = '11.1%';
   container.appendChild(checker);
-} else {
-  var checker = document.createElement('div');
-  checker.style.backgroundColor = "red";
-  checker.style.float = 'left';
-  checker.style.width = '11.1%';
-  checker.style.height = '11.1%';
-  container.appendChild(checker);
-}
 }
