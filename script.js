@@ -8,13 +8,11 @@ document.addEventListener("DOMContentLoaded",function(){
     checker.style.height = "11.1%";
     checker.style.width  = "11.1%";
     checker.style.float  = "left";
-    if(i % 2 === 0) {
-      checker.style.backgroundColor = "black";
-      theBody.appendChild(checker)
-    } else {
-      checker.style.backgroundColor = "red";
-      theBody.appendChild(checker)
-    }
+    var r = Math.floor(Math.random()*255).toString()
+    var g = Math.floor(Math.random()*255).toString()
+    var b = Math.floor(Math.random()*255).toString()
+    checker.style.backgroundColor = `rgb(${r},${g},${b})`
+    theBody.appendChild(checker)
   }
 
 })
