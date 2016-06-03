@@ -22,8 +22,3 @@ function createBoxes(){
 for (var i = 0; i < 32; i++) {
   createBoxes();
 }
-
-// Each tile should be a div
-// Each tile's width is 11.1%
-// Set each tile's float property to left
-// Each tile's paddingBottom is 11.1%
