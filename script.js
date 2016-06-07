@@ -1,26 +1,29 @@
-
+ function timedColors (){
 divContainer = document.createElement('div');
-divNew = document.createElement('div');
 
-
-for(i=0;i<81;i++){
-  if(i % 2 === 0 ){
-    var gradientColor = 'darkred'+9;
-    var divColor = document.createElement('div');
-    divColor.style.backgroundColor= '#0000ff';
-    divColor.style.width = '11.1%'
-    divColor.style.paddingBottom = '11.1%';
-    divColor.style.float = 'left';
-    document.getElementsByTagName('body')[0].appendChild(divColor);
-
-  } else{
-
-    var divColor = document.createElement('div')
-    divColor.style.backgroundColor= 'pink';
-    divColor.style.width = '11.1%'
-    divColor.style.paddingBottom = '11.1%';
-    divColor.style.float = 'left';
-    document.getElementsByTagName('body')[0].appendChild(divColor);
+function colorPicker (){
+  var stri = 'ABCDEFGHIJKLMN'.split('') ;
+  var color = '#';
+  for (var i=0; i<6; i++){
+    color += stri[Math.floor(Math.random()*6)];
   }
-  divContainer.appendChild(divNew);
+  return color;
+};
+
+var interval = window.setInterval(colorPicker, 2000);
+// var myInterval = setInterval(function(){ colorPicker()}, 2000);
+
+for(var i=0;i<81;i++){
+
+    var divColor = document.createElement('div');
+    divColor.style.backgroundColor= colorPicker();
+    divColor.style.width = '11.1%'
+    divColor.style.paddingBottom = '11.1%';
+    divColor.style.float = 'left';
+
+    document.getElementsByTagName('body')[0].appendChild(divColor);
+    // clearInterval(myInterval);
+  }
+  divContainer.appendChild.divColor;
 }
+setInterval(timedColors, 2000);
