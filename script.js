@@ -12,3 +12,13 @@ for (var i = 0; i < 63; i++) {
   div.style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")"
   body.appendChild(div);
 }
+function flash() {
+  for (var i = 0; i < body.children.length; i++) {
+    let red = (Math.floor(Math.random() * 256)).toString();
+    let green = (Math.floor(Math.random() * 256)).toString();
+    let blue = (Math.floor(Math.random() * 256)).toString();
+    body.children[i].style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")"
+  }
+}
+
+setInterval(flash, 2000);
