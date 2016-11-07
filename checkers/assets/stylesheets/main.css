@@ -1,0 +1,175 @@
+
+
+    /*
+====
+Custom styles
+====
+*/
+
+/* link for font reference
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+*/
+body {
+    font-family: "Lato", Trebuchet, sans-serif;
+    font-weight: 300;
+
+}
+em{
+  font-style:italic;
+}
+
+strong{
+  font-weight:700;
+}
+
+
+    /*
+====
+Grid styles
+====
+*/
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+
+
+
+    /*
+====
+Typography
+====
+*/
+
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.player-aside{
+  margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+
+
+    /*
+====
+Buttons
+====
+*/
+
+
+
+    /*
+====
+Links
+====
+*/
+
+    /*
+====
+Navigation
+====
+*/
+
+
+
+    /*
+====
+Images
+*/
+
+
+
+    /*
+====
+Header
+====
+*/
+header{
+  padding-top:2%;
+  padding-bottom:2%;
+  justify-content: space-around;
+
+}
+hgroup{
+  flex-direction: column;
+}
+
+
+    /*
+====
+Main body
+====
+*/
+
+main{
+  justify-content: space-around;;
+
+}
+
+.board{
+
+  background-color:red;
+  border:solid black 1px;
+  flex-direction: column-reverse;;
+}
+
+aside{
+  width: 100%;
+  background-color:grey;
+  flex-direction: column;
+  align-items: center;
+}
+.holding-space .space{
+  flex-direction:column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.holding-space{
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.space{
+  width:70px;
+  height:70px;
+
+}
+figure{
+  border:solid black 1px;
+}
+
+.space{
+  border-radius: 50%;
+}
+
+    /*
+====
+Footer
+====
+*/
