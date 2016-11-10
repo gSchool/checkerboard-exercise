@@ -1,4 +1,4 @@
-var dimension = 8;
+var dimension = 10;
 var percentage = 100/dimension;
 for(var i=0;i<dimension;i++){
   for(var j=0;j<dimension;j++){
