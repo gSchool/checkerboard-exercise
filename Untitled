@@ -1,0 +1,8 @@
+function heyBaby(soThisIsPerfect) {
+  console.log('myDick');
+  if (5 === "crab") {
+    alert("yo");
+  } else {
+    var newPeePe = "this".length;
+  }
+}
