@@ -1,8 +1,8 @@
-#DOM Manipulation Exercise
+# DOM Manipulation Exercise
 
 As always, fork and clone this repo.  Submit the link to your fork when you're done.
 
-###Checkerboard
+### Checkerboard
 
 On the master branch, write code to generate a checkboard pattern as seen below:
 
@@ -35,7 +35,7 @@ You are not allowed to add any other elements to the html file, which means that
 
 **JUST TO REITERATE, YOU WILL NOT WRITE ANY HTML OR CSS FOR THIS EXERCISE.  ONLY JS!!!**
 
-###Random Colors
+### Random Colors
 
 On a new branch called `randomcolors`, implement the following changes:
 
@@ -43,16 +43,16 @@ On a new branch called `randomcolors`, implement the following changes:
 
 ![Screen Shot 2015-05-12 at 10.19.59 PM.png](https://draftin.com:443/images/29115?token=g0Da9o1sdpfxhhNjHJVQ2578h9pJatEhrE_4ysca-j-FXB3EX58CGJmXZT0087rlBo22A_MgqflTfIxhMsUfuV8) 
 
-###Gradient
+### Gradient
 
 On a new branch called `gradient`, write code to color the tiles using some sort of gradient.  It does not need to look exactly like the image below, but it should have some sort of increasing/decreasing color values.
 
 ![Screen Shot 2015-05-12 at 10.17.24 PM.png](https://draftin.com:443/images/29114?token=rfd8xRPfnvVY9rkIhhzxIl8b3vWWgz6_sprT3mzf2K2uvZ39L9w6pHD4JlE8BxU6vmkDCTmxzm0kw7m2gbSNhBw) 
 
-###Flashing Colors
+### Flashing Colors
 
 On a new branch called `flashing`, write code to change each tile's color to a new random color every 2 seconds. 
 
-###Bonus: Audio
+### Bonus: Audio
 
 Get some audio playing to accompany your trippy visuals, using only JS.  No editing the HTML!
