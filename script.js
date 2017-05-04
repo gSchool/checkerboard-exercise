@@ -9,22 +9,11 @@ function JQCode() {
   for (var i = 0; i < 9; i++) {
     for (var j = 0; j < 9; j++) {
       let $tileElement = $('<div class="tile"></div>');
+      let randomColor = '#' + Math.floor(Math.random() * 12323232).toString(16);
       $tileElement.css('width', '11.1%');
       $tileElement.css('float', 'left');
       $tileElement.css('paddingBottom', '11.1%');
-      if (i % 2 === 0) {
-        if (j % 2 === 0) {
-          $tileElement.css('background', 'salmon');
-        } else {
-        $tileElement.css('background', 'rebeccapurple');
-        }
-      } else if(i % 2 !== 0){
-        if (j % 2 === 0) {
-          $tileElement.css('background', 'rebeccapurple');
-        } else {
-        $tileElement.css('background', 'salmon');
-        }
-      }
+      $tileElement.css('background', randomColor);
       $tileElement.css('margin', 'auto');
       $('body').append($tileElement);
     }
