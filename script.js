@@ -9,20 +9,21 @@ function JQCode() {
   for (var i = 0; i < 9; i++) {
     for (var j = 0; j < 9; j++) {
       let $tileElement = $('<div class="tile"></div>');
+      let baseColor = '#' + Math.floor(Math.random() * 12323232).toString(16);
       $tileElement.css('width', '11.1%');
       $tileElement.css('float', 'left');
       $tileElement.css('paddingBottom', '11.1%');
       if (i % 2 === 0) {
         if (j % 2 === 0) {
-          $tileElement.css('background', 'salmon');
+          $tileElement.css('background', 'rgb(15,50,' + (60 + i*j) + ')');
         } else {
-        $tileElement.css('background', 'rebeccapurple');
+          $tileElement.css('background', 'rgb(15,60,' + (60 + i*j) + ')');
         }
       } else if(i % 2 !== 0){
         if (j % 2 === 0) {
-          $tileElement.css('background', 'rebeccapurple');
+          $tileElement.css('background', 'rgb(15,60,' + (60 + i*j) + ')');
         } else {
-        $tileElement.css('background', 'salmon');
+          $tileElement.css('background', 'rgb(15,50,' + (60 + i*j) + ')');
         }
       }
       $tileElement.css('margin', 'auto');
