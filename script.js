@@ -29,4 +29,20 @@ function JQCode() {
       $('body').append($tileElement);
     }
   }
+  // Vanilla JS
+  let boxes = document.getElementsByClassName('tile');
+
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener('mouseover', changeColor);
+    boxes[i].addEventListener('click', changeAgain);
+  }
+
+  function changeColor(){
+    this.style.background = 'lime';
+  }
+
+  function changeAgain(){
+    this.style.background = 'orange';
+  }
+
 }
