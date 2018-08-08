@@ -2,6 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     let colorToggle = 0;
+    // testing my git branching abilities
+    let coloRandom = '#000000';
+
     for (let j=0; j < 4; j++) {
         for (let i = 0; i < 8; i++) {
             colorToggle ++;
