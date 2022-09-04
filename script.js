@@ -40,10 +40,6 @@
 //     document.body.appendChild(gradient)
 // }
 
-// setInterval(square(), '2000')
-    
-// addGradient()  
-
 
 function square(){
         let tile = document.createElement('div');
