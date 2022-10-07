@@ -1,0 +1,14 @@
+.container{
+    width: 100vw;
+    background-color: purple;
+    height: 104px;
+}
+
+.ball{
+    background-color: gold;
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    float: left;
+}
