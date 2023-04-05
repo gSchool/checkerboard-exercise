@@ -15,13 +15,13 @@ You are not allowed to edit the html file, which means that you must create all 
 **Hints**
 
 * Create a container for your tiles with the following styles:
-    * `display = "flex"`;
-    * `flexWrap = "wrap"`;
-    * `width = "800px"`;
-    * `height = "800px"`;
+    * `display = "flex"`
+    * `flexWrap = "wrap"`
+    * `width = "800px"`
+    * `height = "800px"`
 * Each tile should have the following styles:
-    * `width = "12.5%'`
-    * `height = "12.5%'`
+    * `width = "12.5%"`
+    * `height = "12.5%"`
 
 **JUST TO REITERATE, YOU WILL NOT WRITE ANY HTML OR CSS FOR THIS EXERCISE.  ONLY JS!!!**
 
