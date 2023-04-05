@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(min(100vh, 100vw) - 16px);
+  height: calc(min(100vh, 100vw) - 16px);
+}
+
+.tile {
+  width: 12.5%;
+  height: 12.5%;
+}
