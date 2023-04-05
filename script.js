@@ -13,9 +13,9 @@ for (i = 0; i < 4; i++) {
         tile.style.float = "left";
         
         if (i % 2 === 0) {
-            tile.style.background = "black";
-        } else {
             tile.style.background = "red";
+        } else {
+            tile.style.background = "black";
         }
         
         container.append(tile);
@@ -36,9 +36,9 @@ for (i = 0; i < 4; i++) {
         tile.style.float = "left";
         
         if (i % 2 === 0) {
-            tile.style.background = "red";
-        } else {
             tile.style.background = "black";
+        } else {
+            tile.style.background = "red";
         }
         
         container2.append(tile);
