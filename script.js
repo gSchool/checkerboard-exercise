@@ -38,16 +38,11 @@ function maketile(X) {
             tile.style.height = '100%';
 
             row.appendChild(tile);
-
-            if (i % 2 === rowIndex % 2) {
-                tile.style.backgroundColor = 'red';
-            } else {
-                tile.style.backgroundColor = 'black';
-            }
+            tile.style.backgroundColor = `rgb(${createRandomNum()}, ${createRandomNum()}, ${createRandomNum()})`;
         }
     }
 }
 
-function createRandomColors() {
-    
+function createRandomNum() {
+   return Math.floor(Math.random() * 255)
 }
