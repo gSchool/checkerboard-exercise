@@ -5,10 +5,10 @@ maketile(8);
 function makeContainer() {
     let container = document.createElement('div');
     container.classList.add('container');
-    container.style.display = 'flex';
-    container.style.flexWrap = 'wrap';
     container.style.width = '800px';
     container.style.height = '800px';
+    container.style.border = '10px solid';
+    container.style.borderImage = 'linear-gradient(to top, black, red) 1';
     document.body.appendChild(container);
 }
 
@@ -46,4 +46,8 @@ function maketile(X) {
             }
         }
     }
+}
+
+function createRandomColors() {
+    
 }
