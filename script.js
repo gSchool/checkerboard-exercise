@@ -5,7 +5,21 @@ container.style.flexWrap = 'wrap'
 container.style.height = '800px'
 container.style.width = '800px'
 
-
+function makeRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+function makeSquareRandomColor() {
+    let div = document.createElement('div')
+    div.style.height = "12.5%"
+    div.style.width = "12.5%"
+    div.style.backgroundColor = makeRandomColor();
+    container.appendChild(div)
+}
 function makeSquareRed() {
     let div = document.createElement('div')
     div.style.height = "12.5%"
@@ -23,15 +37,6 @@ function makeSquareBlack() {
     container.appendChild(div)
 }
 
-
-var row = 0
-for (var i = 1; i < 65; i++) {
-    if (i % 2 === 1 && row % 2 === 0 || i % 2 === 0 && row % 2 === 1) {
-        makeSquareRed()
-    } else {
-        makeSquareBlack()
-    }
-    if (i % 8 === 0 && i != 0) {
-        row++
-    }
+for (var i = 0; i < 64; i++) {
+    makeSquareRandomColor();
 }
