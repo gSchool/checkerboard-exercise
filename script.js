@@ -1,3 +1,5 @@
+var audio = new Audio("audio/music.mp3");
+audio.play();
 
 var con = document.createElement("Container")
 document.body.appendChild(con);
