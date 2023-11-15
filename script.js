@@ -2,6 +2,8 @@ makeContainer();
 makeRow(8);
 maketile(8);
 gradientOverlay();
+setInterval(changeColors, 2000);
+setInterval(randomColors, 500)
 
 function gradientOverlay() {
     let overlay = document.createElement('div');
@@ -13,8 +15,7 @@ function gradientOverlay() {
     overlay.style.top = '0';
     overlay.style.left = '0';
     overlay.style.backgroundImage = 'linear-gradient(90deg, rgba(200, 25, 250), transparent)';
-    document.querySelector('.container').appendChild(overlay)
-    console.log(document.querySelector('.container'))
+    document.querySelector('.container').appendChild(overlay);
 }
 
 function makeContainer() {
@@ -32,10 +33,10 @@ function makeRow(X) {
     for (let i = 0; i < X; i++) {
         let row = document.createElement('div');
         row.classList.add('row');
-        row.style.width = '100%'; // Set to full width
+        row.style.width = '100%';
         row.style.height = '100px';
         row.style.display = 'flex';
-        row.style.flexWrap = 'wrap'
+        row.style.flexWrap = 'wrap';
         page.appendChild(row);
     }
 }
@@ -63,6 +64,70 @@ function maketile(X) {
     }
 }
 
-function genRandNum() {
-    Math.floor(Math.random() * 255)
+function changeColors() {
+    let tiles = document.querySelectorAll('.tile');
+    for (let i = 0; i < tiles.length; i++) {
+        if (tiles[i].style.backgroundColor == 'red') {
+            tiles[i].style.backgroundColor = 'black';
+        } else {
+            tiles[i].style.backgroundColor = 'red';
+        }
+    }
 }
+
+function genRandNum() {
+    return Math.floor(Math.random() * 255);
+}
+
+function randomColors() {
+    function setRandomTileColor() {
+        let tiles = document.querySelectorAll('.tile');
+        let randomIndex = Math.floor(Math.random() * tiles.length);
+        let randomTile = tiles[randomIndex];
+        randomTile.style.backgroundColor = 'yellow';
+    
+        setTimeout(() => {
+            randomTile.style.backgroundColor = 'red';
+        }, 250);
+    }
+    function setRandomTileColor2() {
+        let tiles = document.querySelectorAll('.tile');
+        let randomIndex = Math.floor(Math.random() * tiles.length);
+        let randomTile = tiles[randomIndex];
+        randomTile.style.backgroundColor = 'blue';
+    
+        setTimeout(() => {
+            randomTile.style.backgroundColor = `black`;
+        }, 250);
+    }
+    function setRandomTileColor3() {
+        let tiles = document.querySelectorAll('.tile');
+        let randomIndex = Math.floor(Math.random() * tiles.length);
+        let randomTile = tiles[randomIndex];
+        randomTile.style.backgroundColor = 'pink';
+    
+        setTimeout(() => {
+            randomTile.style.backgroundColor = `red`;
+        }, 250);
+    }
+    function setRandomTileColor4() {
+        let tiles = document.querySelectorAll('.tile');
+        let randomIndex = Math.floor(Math.random() * tiles.length);
+        let randomTile = tiles[randomIndex];
+        randomTile.style.backgroundColor = 'orange';
+    
+        setTimeout(() => {
+            randomTile.style.backgroundColor = `black`;
+        }, 250);
+    }
+    setRandomTileColor()
+    setRandomTileColor2()
+    setRandomTileColor3()
+    setRandomTileColor4()
+}
+
+
+//this is a comment
+
+
+
