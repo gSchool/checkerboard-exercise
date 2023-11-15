@@ -1,6 +1,21 @@
 makeContainer();
 makeRow(8);
 maketile(8);
+gradientOverlay();
+
+function gradientOverlay() {
+    let overlay = document.createElement('div');
+    overlay.classList.add('gradient-overlay');
+    overlay.style.width = '800px';
+    overlay.style.height = '800px';
+    overlay.style.border = '18px solid black';
+    overlay.style.position = 'absolute';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.backgroundImage = 'linear-gradient(90deg, rgba(200, 25, 250), transparent)';
+    document.querySelector('.container').appendChild(overlay)
+    console.log(document.querySelector('.container'))
+}
 
 function makeContainer() {
     let container = document.createElement('div');
@@ -38,11 +53,16 @@ function maketile(X) {
             tile.style.height = '100%';
 
             row.appendChild(tile);
-            tile.style.backgroundColor = `rgb(${createRandomNum()}, ${createRandomNum()}, ${createRandomNum()})`;
+
+            if (i % 2 === rowIndex % 2) {
+                tile.style.backgroundColor = 'red';
+            } else {
+                tile.style.backgroundColor = 'black';
+            }
         }
     }
 }
 
-function createRandomNum() {
-   return Math.floor(Math.random() * 255)
+function genRandNum() {
+    Math.floor(Math.random() * 255)
 }
